@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMS Tutoring | Expert Warehouse Management System Training</title>
+    <meta name="description" content="Specialist tutoring in Warehouse Management Systems (WMS). Expert training in Manhattan Associates and SSI Schaefer for individuals and professionals.">
+    
+    <!-- Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #003366; /* Navy Blue */
+            --secondary-color: #005b96; /* Lighter Blue */
+            --accent-color: #ff9900; /* Subtle Orange Accent */
+            --text-color: #333;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Warehouse Image */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 10px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-text li {
+            margin-bottom: 10px;
+        }
+
+        .about-text i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: var(--light-bg);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .contact-info i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">WMS Tutoring</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Master Your Warehouse Management System</h1>
+            <p>Expert private tutoring and consultancy in Manhattan Associates and SSI Schaefer systems. <br>Bridge the gap between theory and operational excellence.</p>
+            <a href="#contact" class="btn">Book a Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About WMS Tutoring</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Based in Sheffield, WMS Tutoring provides specialized education for logistics professionals and individuals looking to upskill in the warehouse management sector.</p>
+                <br>
+                <p>We move beyond generic training. Our sessions are tailored to your specific needs, focusing on the practical application of two of the world's leading WMS platforms.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <strong>Manhattan Associates:</strong> Deep dive into configuration, waving, and inventory flows.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>SSI Schaefer:</strong> Understanding automation integration and WAMAS workflows.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Practical Focus:</strong> Real-world scenarios, troubleshooting, and system optimization.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>1-on-1 Tutoring</h3>
+                <p>Personalized sessions for individuals looking to learn WMS fundamentals or advanced configuration. Perfect for career changers or new hires.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs"></i>
+                <h3>System Specific Training</h3>
+                <p>Focused modules on <strong>Manhattan Associates</strong> (WMOS/Active) and <strong>SSI Schaefer</strong> systems. Learn the specific UI and logic of these giants.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Operational Consulting</h3>
+                <p>For small businesses or teams: We analyze your current understanding and use of your WMS to identify knowledge gaps and training needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Ready to improve your WMS knowledge? Contact us for rates and availability.</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p><a href="mailto:riqbal1915@hotmail.co.uk" style="color:inherit;">contact@wmstutoring.co.uk</a></p>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Sheffield, United Kingdom<br>(Remote sessions available worldwide)</p>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-clock"></i>
+                <h3>Hours</h3>
+                <p>Mon - Fri: 09:00 - 18:00<br>Sat: By Appointment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 WMS Tutoring. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.8;">
+            Privacy Policy: We do not store personal data beyond what is required to reply to your enquiries.
+        </p>
+    </footer>
+
+</body>
+</html>
